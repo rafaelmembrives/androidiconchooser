@@ -9,7 +9,7 @@ In that way, you can maintain control over the appearance of your icons, even if
 When you use the an Action Bar you must download the <a href="http://developer.android.com/design/downloads/index.html">Action Bar Icon Pack</a>,
 find, rename and copy the icons for the diferents densities to your project.  
 
-With this plugin you can easily import the icons from the Action Bar Icon Pack (tested in eclipse Indigo and Juno)
+With this plugin you can easily import the icons from the Action Bar Icon Pack.
 
 Installation
 ------------
