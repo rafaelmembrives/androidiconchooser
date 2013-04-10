@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.rmembrives.iconchooser.commands.androidIconChooserCommand"
+            name="Android Icon Chooser">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="com.rmembrives.iconchooser.commands.androidIconChooserCommand"
+               icon="icons/icon.png"
+               id="com.rmembrives.iconchooser.menus.androidIconChooserCommand"
+               label="Android Icon Chooser"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <and>
+                     <count
+                           value="1">
+                     </count>
+                     <iterate>
+                        <adapt
+                              type="org.eclipse.core.resources.IProject">
+                           <and>
+                              <test
+                                    property="org.eclipse.core.resources.projectNature"
+                                    value="com.android.ide.eclipse.adt.AndroidNature">
+                              </test>
+                           </and>
+                        </adapt>
+                     </iterate>
+                  </and>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.rmembrives.iconchooser.handlers.AndroidIconChooserHandler"
+            commandId="com.rmembrives.iconchooser.commands.androidIconChooserCommand">
+      </handler>
+   </extension>
+
+</plugin>
