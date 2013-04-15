@@ -17,8 +17,8 @@ Installation
 Copy the <a href="https://www.dropbox.com/s/46hzcfymd7ckkbs/com.rmembrives.androidiconchooser_1.0.0.201304091619.jar">plugin</a>
 file into the eclipse *dropin* folder.
 
-How-to:
--------
+How-to
+------
 
  * Press right mouse button in an Android Project and select the *Android Icon Chooser* menu option.
  * Be sure you are in the *Package Browser* view
